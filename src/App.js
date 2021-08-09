@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Box from './components/Box'
+import ClassComponent from './components/ClassComponent'
+import './asstes/style.css'
+import generate from '@babel/generator'
+
+function App(){
+    let internalCss = {
+        color:'yellow',
+        background:'green'
+    }
+    return (
+        <div>
+            <h1 style={ {color:'red', fontSize:'20px' } }>From App Component</h1> 
+            <h2 className="title">From App Component h2</h2> 
+            <h3 style={internalCss} > Title Example </h3>
+
+            {/* <!-- --> */}
+            <Box name="sanaul" age="27" />
+
+            
+            <ClassComponent />
+            
+       </div>
+    )
+
 }
 
-export default App;
+export default App
+
