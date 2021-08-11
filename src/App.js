@@ -2,8 +2,8 @@ import React from 'react'
 
 import Box from './components/Box'
 import ClassComponent from './components/ClassComponent'
+import Form from './components/Form'
 import './asstes/style.css'
-import generate from '@babel/generator'
 
 function App(){
     let internalCss = {
@@ -17,10 +17,15 @@ function App(){
             <h3 style={internalCss} > Title Example </h3>
 
             {/* <!-- --> */}
+            
+            <Form />
             <Box name="sanaul" age="27" />
 
             
-            <ClassComponent />
+            <ClassComponent title="This is props"/>
+            <br />
+            <br />
+            <br />
             
        </div>
     )
